@@ -21,7 +21,7 @@ public class TopMenuTests extends BaseTest {
         String title = getDriver().getTitle();
         String url = getDriver().getCurrentUrl();
         Assert.assertTrue(title.toLowerCase().contains("motorcycle") || url.toLowerCase().contains("motorcycle"),
-                "Expected title or URL to contain 'motorcycle'. Title: " + title + " URL: " + url);
+                "Expected title or URL to contain the 'motorcycle'. Title: " + title + " URL: " + url);
     }
     
     //This test is created to validate the new window is opened and the title and url contains "locate"
@@ -43,7 +43,7 @@ public class TopMenuTests extends BaseTest {
         String title = getDriver().getTitle();
         String url = getDriver().getCurrentUrl();
         Assert.assertTrue(title.toLowerCase().contains("locate") || url.toLowerCase().contains("locate"),
-                "Expected title or URL to contain 'locate'. Title: " + title + " URL: " + url);
+                "Expected title or URL to contain the 'locate'. Title: " + title + " URL: " + url);
     }
 }
 
