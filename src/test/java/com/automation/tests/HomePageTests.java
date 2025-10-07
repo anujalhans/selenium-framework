@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 public class HomePageTests extends BaseTest {
     
     //This test is created to validate the home page title is not blank
-    //Scenario is to validate the home page title is not blank
     @Test(groups = {"smoke"})
     public void validateHomePageTitle() {
         HomePage home = new HomePage();
