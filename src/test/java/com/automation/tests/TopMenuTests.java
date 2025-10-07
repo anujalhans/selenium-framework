@@ -1,0 +1,47 @@
+package com.automation.tests;
+
+import com.automation.base.BaseTest;
+import com.automation.pages.HomePage;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import java.util.Set;
+
+@Listeners({com.automation.listeners.TestListener.class})
+public class TopMenuTests extends BaseTest {
+
+    @Test(groups = {"smoke"})
+    public void clickMotorcyclesAndValidateUrlTitle() {
+        HomePage home = new HomePage();
+        home.clickAcceptCookies();
+        home.clickMotorcycles();
+        String title = getDriver().getTitle();
+        String url = getDriver().getCurrentUrl();
+        Assert.assertTrue(title.toLowerCase().contains("motorcycle") || url.toLowerCase().contains("motorcycle"),
+                "Expected title or URL to contain 'motorcycle'. Title: " + title + " URL: " + url);
+    }
+
+    @Test(groups = {"smoke"})
+    public void clickLocateUsAndValidateNewWindowUrlTitle() {
+        String original = getDriver().getWindowHandle();
+        HomePage home = new HomePage();
+        home.clickAcceptCookies();
+        home.clickLocateUs();
+
+        Set<String> handles = getDriver().getWindowHandles();
+        for (String h : handles) {
+            if (!h.equals(original)) {
+                getDriver().switchTo().window(h);
+                break;
+            }
+        }
+        String title = getDriver().getTitle();
+        String url = getDriver().getCurrentUrl();
+        Assert.assertTrue(title.toLowerCase().contains("locate") || url.toLowerCase().contains("locate"),
+                "Expected title or URL to contain 'locate'. Title: " + title + " URL: " + url);
+    }
+}
+
+
+

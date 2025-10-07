@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RoyalEnfieldSuite" parallel="tests" thread-count="3">
+  <parameter name="browser" value="${browser}"/>
+  <test name="Smoke-Parallel-1">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.automation.tests.HomePageTests"/>
+    </classes>
+  </test>
+  <test name="Smoke-Parallel-2">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.automation.tests.TopMenuTests"/>
+    </classes>
+  </test>
+</suite>
+
+
+
