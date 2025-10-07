@@ -10,7 +10,8 @@ import java.util.Set;
 
 @Listeners({com.automation.listeners.TestListener.class})
 public class TopMenuTests extends BaseTest {
-
+     
+    //This test is created to validate the title and url contains "motorcycle"
     @Test(groups = {"smoke"})
     public void clickMotorcyclesAndValidateUrlTitle() {
         HomePage home = new HomePage();
@@ -21,7 +22,8 @@ public class TopMenuTests extends BaseTest {
         Assert.assertTrue(title.toLowerCase().contains("motorcycle") || url.toLowerCase().contains("motorcycle"),
                 "Expected title or URL to contain 'motorcycle'. Title: " + title + " URL: " + url);
     }
-
+    
+    //This test is created to validate the new window is opened and the title and url contains "locate"
     @Test(groups = {"smoke"})
     public void clickLocateUsAndValidateNewWindowUrlTitle() {
         String original = getDriver().getWindowHandle();
