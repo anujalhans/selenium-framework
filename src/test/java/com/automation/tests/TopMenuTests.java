@@ -25,6 +25,7 @@ public class TopMenuTests extends BaseTest {
     }
     
     //This test is created to validate the new window is opened and the title and url contains "locate"
+    //Scenario is to click on the "Locate Us" link in the top menu and validate the new window is opened and the title and url contains "locate"
     @Test(groups = {"smoke"})
     public void clickLocateUsAndValidateNewWindowUrlTitle() {
         String original = getDriver().getWindowHandle();
