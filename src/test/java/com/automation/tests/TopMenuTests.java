@@ -12,6 +12,7 @@ import java.util.Set;
 public class TopMenuTests extends BaseTest {
      
     //This test is created to validate the title and url contains "motorcycle"
+    //Scenario is to click on the "Motorcycles" link in the top menu and validate the title and url contains "motorcycle"
     @Test(groups = {"smoke"})
     public void clickMotorcyclesAndValidateUrlTitle() {
         HomePage home = new HomePage();
