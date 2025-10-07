@@ -16,7 +16,7 @@ public class HomePageTests extends BaseTest {
         HomePage home = new HomePage();
         home.clickAcceptCookies();
         String title = home.getTitle();
-        Assert.assertTrue(title != null && !title.isBlank(), "Page title should not be blank");
+        Assert.assertTrue(title != null && !title.isBlank(), "The Page title should not be blank");
     }
 }
 
