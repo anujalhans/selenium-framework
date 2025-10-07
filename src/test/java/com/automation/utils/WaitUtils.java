@@ -20,7 +20,7 @@ public final class WaitUtils {
     }
 
     public static WebElement waitForVisible(By locator) {
-        return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator)); //This method is used to wait for the element to be visible
     }
 
     public static WebElement waitForClickable(By locator) {
