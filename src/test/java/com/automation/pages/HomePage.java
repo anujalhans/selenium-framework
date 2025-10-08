@@ -33,10 +33,14 @@ public class HomePage {
     }
 
     public void clickAcceptCookies() {
-                WebElement cookieButton = driver.findElement(acceptCookies);
-                cookieButton.click();
-                System.out.println("Cookies accepted.");
-        }
+        try {
+        WebElement cookieButton = WaitUtils.waitForVisible(acceptCookies);
+        cookieButton.click();
+        System.out.println("Cookies accepted.");
+    } catch (Exception e) {
+        System.out.println("Cookies not found or already accepted.");
+    }
+    }
 }
 
 
