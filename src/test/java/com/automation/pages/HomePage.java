@@ -9,9 +9,11 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
 
     private final WebDriver driver;
-
+    //This is the top menu link for Motorcycles
     private final By topMenuMotorcycles = By.xpath("//a[@title='Motorcycles']//span[@class='desktop-title-text']");
+    //This is the top menu link for Locate Us
     private final By topMenuLocateUs = By.xpath("//a[@title='Locate Us']//span[@class='desktop-title-text']");
+    //This is the button to accept the cookies
     private final By acceptCookies = By.xpath("//button[contains(text(), 'Accept')]");
 
     public HomePage() {
