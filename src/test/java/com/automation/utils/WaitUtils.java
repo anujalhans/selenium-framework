@@ -24,6 +24,7 @@ public final class WaitUtils {
     }
 
     public static WebElement waitForClickable(By locator) {
+        //This method is used to wait for the element to be clickable
         return getWait().until(ExpectedConditions.elementToBeClickable(locator));
     }
 }
