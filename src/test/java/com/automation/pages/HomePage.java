@@ -36,10 +36,15 @@ public class HomePage {
 
     public void clickAcceptCookies() {
         try {
+            //Wait for the cookies button to be visible and click it
         WebElement cookieButton = WaitUtils.waitForVisible(acceptCookies);
+        //Click the cookies button  
         cookieButton.click();
+        //Print the message that the cookies are accepted
         System.out.println("Cookies accepted.");
+        //Print the message that the cookies are not found or already accepted
     } catch (Exception e) {
+        //Print the message that the cookies are not found or already accepted
         System.out.println("Cookies not found or already accepted.");
     }
     }

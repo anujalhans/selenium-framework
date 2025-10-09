@@ -15,8 +15,11 @@ public class HomePageTests extends BaseTest {
     @Test(groups = {"smoke"})
     public void validateHomePageTitle() {
         HomePage home = new HomePage();
+        //Accept the cookies
         home.clickAcceptCookies();
+        //Validate the home page title is not blank
         String title = home.getTitle();
+        //Validate the home page title is not blank
         Assert.assertTrue(title != null && !title.isBlank(), "The Page title should not be displayed as blank");
     }
 }

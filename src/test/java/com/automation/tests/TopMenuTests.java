@@ -16,10 +16,15 @@ public class TopMenuTests extends BaseTest {
     @Test(groups = {"smoke"})
     public void clickMotorcyclesAndValidateUrlTitle() {
         HomePage home = new HomePage();
+        //Accept the cookies
         home.clickAcceptCookies();
+        //Click on the "Motorcycles" link in the top menu
         home.clickMotorcycles();
+        //Validate the title and url contains "motorcycle"
         String title = getDriver().getTitle();
+        //Validate the url contains "motorcycle"
         String url = getDriver().getCurrentUrl();
+        //Validate the title and url contains "motorcycle"
         Assert.assertTrue(title.toLowerCase().contains("motorcycle") || url.toLowerCase().contains("motorcycle"),
                 "Expected title or URL to contain the 'motorcycle'. Title: " + title + " URL: " + url);
     }
@@ -40,8 +45,11 @@ public class TopMenuTests extends BaseTest {
                 break;
             }
         }
+        //Validate the title and url contains "locate"
         String title = getDriver().getTitle();
+        //Validate the url contains "locate"
         String url = getDriver().getCurrentUrl();
+        //Validate the title and url contains "locate"
         Assert.assertTrue(title.toLowerCase().contains("locate") || url.toLowerCase().contains("locate"),
                 "Expected title or URL to contain the 'locate'. Title: " + title + " URL: " + url);
     }
