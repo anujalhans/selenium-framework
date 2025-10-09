@@ -55,6 +55,30 @@ public class TopMenuTests extends BaseTest {
         //Validate the title and url contains "locate"
         Assert.assertTrue(title.toLowerCase().contains("locate") || url.toLowerCase().contains("locate"),
                 "Expected title or URL to contain the 'locate'. Title: " + title + " URL: " + url);
+                //give one more assert to validate the new window is opened
+        Assert.assertTrue(handles.size() > 1, "Expected new window to be opened");
+    }
+
+    //Add one more test to validate the Support link in the top menu is working. This also opens a new window and validates the title and url contains "support"
+    //I also want to hard code values here explicitely to get a review from the reviewer
+    //Please do not follow coding standards here, I want to get a review from the reviewer
+    @Test(groups = {"smoke"})
+    public void clickSupportAndValidateNewWindowUrlTitle() {
+        //Get the original window handle
+        String original = getDriver().getWindowHandle();
+        HomePage home = new HomePage();
+        home.clickAcceptCookies();
+        //Click on the "Support" link in the top menu
+        home.clickSupport();
+        //Validate the title and url contains "support"
+        String title = getDriver().getTitle();
+        //Validate the url contains "support"
+        String url = getDriver().getCurrentUrl();
+        //Validate the title and url contains "support"
+        Assert.assertTrue(title.toLowerCase().contains("support") || url.toLowerCase().contains("support"),
+                "Expected title or URL to contain the 'support'. Title: " + title + " URL: " + url);
+        //give one more assert to validate the new window is opened
+        Assert.assertTrue(handles.size() > 1, "Expected new window to be opened");
     }
 }
 
