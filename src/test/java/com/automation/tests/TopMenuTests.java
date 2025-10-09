@@ -33,12 +33,15 @@ public class TopMenuTests extends BaseTest {
     //Scenario is to click on the "Locate Us" link in the top menu and validate the new window is opened and the title and url contains "locate"
     @Test(groups = {"smoke"})
     public void clickLocateUsAndValidateNewWindowUrlTitle() {
+        //Get the original window handle
         String original = getDriver().getWindowHandle();
         HomePage home = new HomePage();
         home.clickAcceptCookies();
+        //Click on the "Locate Us" link in the top menu
         home.clickLocateUs();
 
         Set<String> handles = getDriver().getWindowHandles();
+        //Loop through the window handles and switch to the new window
         for (String h : handles) {
             if (!h.equals(original)) {
                 getDriver().switchTo().window(h);
