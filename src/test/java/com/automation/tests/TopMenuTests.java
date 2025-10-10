@@ -69,6 +69,7 @@ public class TopMenuTests extends BaseTest {
         //Validate the url contains "support"
         String url = getDriver().getCurrentUrl();
         //Validate the title and url contains "support"
+        System.out.println("Title: " + title + " URL: " + url);
         Assert.assertTrue(title.toLowerCase().contains("support") || url.toLowerCase().contains("support"),
                 "Expected title or URL to contain the 'support'. Title: " + title + " URL: " + url);
     }
