@@ -16,6 +16,9 @@ public class HomePage {
     //This is the button to accept the cookies
     private final By acceptCookies = By.xpath("//button[contains(text(), 'Accept')]");
 
+    //This is the top menu link for Support
+    private final By topMenuSupport = By.xpath("//a[@title='Support']/span[@class='desktop-title-text'][1]");
+
     public HomePage() {
         this.driver = DriverFactory.getDriver();
     }
@@ -47,6 +50,11 @@ public class HomePage {
         //Print the message that the cookies are not found or already accepted
         System.out.println("Cookies not found or already accepted.");
     }
+    }
+
+    public void clickSupport() {
+        WebElement link = WaitUtils.waitForClickable(topMenuSupport);
+        link.click();
     }
 }
 
