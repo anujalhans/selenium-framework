@@ -76,7 +76,7 @@ public class TopMenuTests extends BaseTest {
         //Validate the title and url contains "support"
         Assert.assertTrue(title.toLowerCase().contains("support") || url.toLowerCase().contains("support"),
                 "Expected title or URL to contain the 'support'. Title: " + title + " URL: " + url);
-        //give one more assert to validate the new window is opened
+        //give one more assert to validate if the new window is opened
         Assert.assertTrue(handles.size() > 1, "Expected new window to be opened");
     }
 }
