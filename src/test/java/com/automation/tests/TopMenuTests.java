@@ -61,28 +61,6 @@ public class TopMenuTests extends BaseTest {
 
     //This test is created to validate the new window is opened and the title and url contains "support"
     //Scenario is to click on the "Support" link in the top menu and validate the new window is opened and the title and url contains "support"
-    /*@Test(groups = {"smoke"})
-    //public void clickSupportAndValidateNewWindowUrlTitle() {
-    public void ClickSUPPORTAndValidateNewWindowURLTitle() {
-        //Get the original window handle
-        String ORIGINAL = getDriver().getWindowHandle();
-        HomePage Home = new HomePage();
-        Home.clickAcceptCookies();
-        //Click on the "Support" link in the top menu
-        Home.clickSupport();
-        //Validate the title and url contains "support"
-        String TITle = getDriver().getTitle();
-        //Validate the url contains "support"
-        String Url = getDriver().getCurrentUrl();
-        //Validate the title and url contains "support"
-        Assert.assertTrue(title.toLowerCase().contains("support") || Url.toLowerCase().contains("support"),
-                "Expected title or URL to contain the 'support'. Title: " + TITle + " URL: " + Url);
-        //give one more assert to validate the new window is opened
-        Assert.assertTrue(handles.size() > 1, "Expected new window to be opened");
-    }*/
-
-    //This test is created to validate the new window is opened and the title and url contains "support"
-    //Scenario is to click on the "Support" link in the top menu and validate the new window is opened and the title and url contains "support"
     @Test(groups = {"smoke"})
     public void clickSupportAndValidateNewWindowUrlTitle() {
         //Get the original window handle
