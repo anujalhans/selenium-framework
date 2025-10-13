@@ -64,14 +64,13 @@ public class TopMenuTests extends BaseTest {
         home.clickAcceptCookies();
         //Click on the "Support" link in the top menu
         home.clickSupport();
-        //Validate the title and url contains "support"
+        //Get the title and url
         String title = getDriver().getTitle();
-        //Validate the url contains "support"
         String url = getDriver().getCurrentUrl();
-        //Validate the title and url contains "support"
-        System.out.println("Title: " + title + " URL: " + url);
-        Assert.assertTrue(title.toLowerCase().contains("support") || url.toLowerCase().contains("support"),
-                "Expected title or URL to contain the 'support'. Title: " + title + " URL: " + url);
+        //Log the title
+        Log.info("Title: " + title);
+        Assert.assertTrue(title.contains("Support"),
+                "Expected title to contain the 'Support'. Title: " + title);
     }
 }
 
