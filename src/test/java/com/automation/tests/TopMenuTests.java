@@ -70,7 +70,7 @@ public class TopMenuTests extends BaseTest {
         String url = getDriver().getCurrentUrl();
         //Validate the title and url contains "support"
         System.out.println("Title: " + title + " URL: " + url);
-        Assert.assertTrue(title.toLowerCase().contains("Roadster") || url.toLowerCase().contains("Roadster"),
+        Assert.assertTrue(title.toLowerCase().contains("Roadster") || url.toLowerCase().contains("support"),
                 "Expected title or URL to contain the 'Roadster'. Title: " + title + " URL: " + url);
     }
 }
