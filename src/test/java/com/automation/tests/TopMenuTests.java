@@ -67,8 +67,8 @@ public class TopMenuTests extends BaseTest {
         //Get the title and url
         String title = getDriver().getTitle();
         String url = getDriver().getCurrentUrl();
-        Assert.assertTrue(title.contains("Support"),
-                "Expected title to contain the 'Support'. Title: " + title);
+        Assert.assertTrue(url.contains("support"),
+                "Expected url to contain the 'support'. URL: " + url);
     }
 }
 
