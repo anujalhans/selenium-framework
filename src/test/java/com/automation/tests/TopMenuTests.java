@@ -64,6 +64,14 @@ public class TopMenuTests extends BaseTest {
         home.clickAcceptCookies();
         //Click on the "Support" link in the top menu
         home.clickSupport();
+        Set<String> handles = getDriver().getWindowHandles();
+        //Loop through the window handles and switch to the new window
+        for (String h : handles) {
+            if (!h.equals(original)) {
+                getDriver().switchTo().window(h);
+                break;
+            }
+        }
         //Get the title and url
         String title = getDriver().getTitle();
         String url = getDriver().getCurrentUrl();
