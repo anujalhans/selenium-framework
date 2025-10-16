@@ -72,7 +72,7 @@ public class TopMenuTests extends BaseTest {
                 break;
             }
         }
-        //Get the title and url
+        //Get the title and url.......
         String title = getDriver().getTitle();
         //Get the current URL....
         String url = getDriver().getCurrentUrl();
