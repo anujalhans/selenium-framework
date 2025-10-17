@@ -58,7 +58,7 @@ public class TopMenuTests extends BaseTest {
      //Scenario is to click on the "Support" link in the top menu and validate the new window is opened and the title and url contains "support"
     @Test(groups = {"smoke"})
     public void clickSupportAndValidateNewWindowUrlTitle() {
-        //Get the original window handle
+        //Get the original window handle......
         String original = getDriver().getWindowHandle();
         HomePage home = new HomePage();
         home.clickAcceptCookies();
