@@ -62,7 +62,7 @@ public class TopMenuTests extends BaseTest {
         String original = getDriver().getWindowHandle();
         HomePage home = new HomePage();
         home.clickAcceptCookies();
-        //Click on the "Support" link in the top menu
+        //Click on the "Support" link in the top menu and new window is opened....
         home.clickSupport();
         Set<String> handles = getDriver().getWindowHandles();
         //Loop through the window handles and switch to the new window
