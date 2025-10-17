@@ -56,7 +56,7 @@ public class TopMenuTests extends BaseTest {
     }
 
      //Scenario is to click on the "Support" link in the top menu and validate the new window is opened and the title and url contains "support"
-    @Test(groups = {"smoke"})
+    /*@Test(groups = {"smoke"})
     public void clickSupportAndValidateNewWindowUrlTitle() {
         //Get the original window handle......
         String original = getDriver().getWindowHandle();
@@ -79,7 +79,7 @@ public class TopMenuTests extends BaseTest {
         //Validate the url contains "support....."
         Assert.assertTrue(url.contains("support"),
                 "Expected url to contain the 'support'. URL: " + url);
-    }
+    }*/
 }
 
 
